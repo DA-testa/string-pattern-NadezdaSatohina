@@ -30,9 +30,9 @@ def get_occurrences(pattern, text):
 
 # this part launches the functions
 if __name__ == '__main__':
-    input_type = input("Input Type: ")
+    input_type = input("")
     if "F" in input_type:
-        filename = input("Input File Name: ")
+        filename = input("")
 
         if "test/" not in filename:
             filename = "test/" + filename
@@ -41,8 +41,8 @@ if __name__ == '__main__':
                 pattern = f.readline().strip()
                 text = f.readline().strip()
     elif "I" in input_type:
-        pattern = input("Pattern: ").strip()
-        text = input("Text: ").strip()
+        pattern = input("").strip()
+        text = input("").strip()
 
     print_occurrences(get_occurrences(pattern, text))
 
