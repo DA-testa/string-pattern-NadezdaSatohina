@@ -28,11 +28,13 @@ def print_occurrences(output):
 def get_occurrences(pattern, text):
     return list(search(text, len(pattern), hash(pattern, len(pattern))))
 
-# this part launches the functions
-if __name__ == '__main__':
+def main():
     input_type = input("")
     if "F" in input_type:
-        filename = input("")
+        try:
+            filename = input("")
+        except EOFError:
+            return
 
         if "test/" not in filename:
             filename = "test/" + filename
@@ -46,3 +48,7 @@ if __name__ == '__main__':
 
     print_occurrences(get_occurrences(pattern, text))
 
+
+# this part launches the functions
+if __name__ == '__main__':
+    main()
