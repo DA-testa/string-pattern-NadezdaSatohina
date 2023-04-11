@@ -29,13 +29,10 @@ def get_occurrences(pattern, text):
     return list(search(text, len(pattern), hash(pattern, len(pattern))))
 
 def main():
-    input_type = input("")
+    input_type = input()
     print(input_type)
     if "F" in input_type:
-        try:
-            filename = input()
-        except EOFError:
-            return
+        filename = input()
 
         if "test/" not in filename:
             filename = "test/" + filename
